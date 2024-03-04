@@ -4,16 +4,34 @@ export const addLabSchema = z.object({
   labName: z.string().min(2, {
     message: "Lab Name must be at least 2 characters.",
   }),
-  providerGroup: z.string().min(1),
-  providerUnit: z.string().min(1),
-  address: z.string().min(1),
-  state: z.string().min(1),
-  city: z.string().min(1),
-  zipCode: z.string().min(1),
-  officePhone: z.string().min(1),
-  mobile: z.string().min(1),
+  providerGroup: z.string().min(1, {
+    message: "Required",
+  }),
+  providerUnit: z.string().min(1, {
+    message: "Required",
+  }),
+  address: z.string().min(1, {
+    message: "Required",
+  }),
+  state: z.string().min(1, {
+    message: "Required",
+  }),
+  city: z.string().min(1, {
+    message: "Required",
+  }),
+  zipCode: z.string().min(1, {
+    message: "Required",
+  }),
+  officePhone: z.string().min(1, {
+    message: "Required",
+  }),
+  mobile: z.string().min(1, {
+    message: "Required",
+  }),
   emailId: z.string().email("Invalid email address"),
-  portalTimeZone: z.string().min(1),
+  portalTimeZone: z.string().min(1, {
+    message: "Required",
+  }),
 });
 
 export const addLabDefaultValues = {
