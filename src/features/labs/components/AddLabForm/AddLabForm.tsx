@@ -48,6 +48,7 @@ export function AddLabForm() {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     toast("Lab has been created.");
+    console.log(values);
     form.reset();
   }
 
