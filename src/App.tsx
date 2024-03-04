@@ -1,14 +1,12 @@
-import { Sidebar } from "./components/blocks/Sidebar";
-import { AddLabForm } from "./features/labs";
-import Header from "./components/blocks/Header/Header";
+import { AddLabForm } from "@/features/labs/";
+import Layout from "@/components/blocks/Layout";
 
 function App() {
   return (
     <>
-      <Sidebar>
-        <Header />
+      <Layout>
         <AddLabForm />
-      </Sidebar>
+      </Layout>
     </>
   );
 }
